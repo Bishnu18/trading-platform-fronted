@@ -1,8 +1,8 @@
   
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import { DragHandleHorizontalIcon } from '@radix-ui/react-icons'
+import { DragHandleHorizontalIcon, MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import React from 'react'
 import Sidebar from './Sidebar'
 
@@ -36,7 +36,23 @@ const Navbar = () => {
     <Sidebar/>
   </SheetContent>
 </Sheet>
+<p className="text-sm lg:text-base cursor-pointer">
+  Crypto Trading 
+</p>
+<div className="p-0 ml-9">
+<Button variant="outline" className="flex items-center gap-3">
+  <MagnifyingGlassIcon/>
+  <span>Search</span>
+</Button>
+</div>
 
+        </div>
+        <div>
+          <Avatar>
+            <AvatarFallback>
+              B
+            </AvatarFallback>
+          </Avatar>
         </div>
         
     </div>
